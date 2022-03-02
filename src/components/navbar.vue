@@ -22,7 +22,7 @@
           <router-link to="shop">商店</router-link>
         </li>
         <li>
-          <a @click="navbar.product_submenu=true;navbar.collapse=true;">產品</a>
+          <a @click="navbar.product_submenu=!navbar.product_submenu;navbar.collapse=true;" :class="{'active':navbar.product_submenu}">產品</a>
         </li>
         <li>
           <router-link to="support">支援服務</router-link>
@@ -252,6 +252,7 @@ nav{
     display:flex;
     list-style:none;
     li a{
+      cursor: pointer;
       text-decoration: none;
       color: rgb(150, 150, 150);
       transition:0.5s all;
